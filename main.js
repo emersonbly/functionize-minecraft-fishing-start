@@ -14,6 +14,7 @@ let numCod = 0;
 let numSalmon = 0;
 let numTropical = 0;
 let numPuffer = 0;
+let character = charSelect.value;
 
 // Add Event Listener to Calculate Button
 fishBtn.addEventListener('click', fishBtnClicked);
@@ -23,9 +24,12 @@ function fishBtnClicked() {
   // Check Selected Character
   let character = charSelect.value;
 
+  fishChance(character);
+
   // Catch fish based on character
   if (character === 'steve') {
     // STEVE: Cod 70%, Salmon 20%, Tropical 5%, Puffer 5%
+    
     let randNum = Math.random();
     if (randNum < 0.7) {
       numCod++;
@@ -46,6 +50,7 @@ function fishBtnClicked() {
     }
   } else if (character === 'alex') {
     // ALEX: Cod 10%, Salmon 10%, Tropical 30%, Puffer 50%
+
     let randNum = Math.random();
     if (randNum < 0.1) {
       numCod++;
@@ -65,4 +70,13 @@ function fishBtnClicked() {
       resultImg.src = 'img/Pufferfish.png';
     }
   }
+
+  function fishChance() {
+    if (character === 'steve') {
+     
+    }
+  
+  }
 }
+
+
