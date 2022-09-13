@@ -28,6 +28,7 @@ function fishBtnClicked() {
 function fishChance(character) {
   // declare variables
   let randNum = Math.random();
+  console.log(randNum);
   let codChance = 0;
   let salmonChance = 0;
   let tropicalChance = 0;
@@ -40,6 +41,11 @@ function fishChance(character) {
     codChance = 0.1;
     salmonChance = 0.1;
     tropicalChance = 0.3;
+  }
+  else if (character === "villager") {
+    codChance = 0.25;
+    salmonChance = 0.50;
+    tropicalChance = 0.75;
   } // fish
   if (randNum < codChance) {
     numCod++;
