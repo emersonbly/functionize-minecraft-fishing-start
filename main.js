@@ -25,14 +25,12 @@ function fishBtnClicked() {
   let character = charSelect.value;
   fishChance(character);
 }
-
 function fishChance(character) {
   // declare variables
   let randNum = Math.random();
   let codChance = 0;
   let salmonChance = 0;
   let tropicalChance = 0;
-
   //set chances
   if (character === "steve") {
     codChance = 0.7;
@@ -42,8 +40,7 @@ function fishChance(character) {
     codChance = 0.1;
     salmonChance = 0.1;
     tropicalChance = 0.3;
-  }
-  // fish
+  } // fish
   if (randNum < codChance) {
     numCod++;
     numCodSpan.innerHTML = numCod;
