@@ -23,73 +23,36 @@ fishBtn.addEventListener("click", fishBtnClicked);
 function fishBtnClicked() {
   // Check Selected Character
   let character = charSelect.value;
-
   fishChance(character);
-
-  // Catch fish based on character
-  if (character === "steve") {
-    // STEVE: Cod 70%, Salmon 20%, Tropical 5%, Puffer 5%
-
-    let randNum = Math.random();
-    if (randNum < 0.7) {
-      numCod++;
-      numCodSpan.innerHTML = numCod;
-      resultImg.src = "img/Raw-Cod.png";
-    } else if (randNum < 0.9) {
-      numSalmon++;
-      numSalmonSpan.innerHTML = numSalmon;
-      resultImg.src = "img/Raw-Salmon.png";
-    } else if (randNum < 0.95) {
-      numTropical++;
-      numTropicalSpan.innerHTML = numTropical;
-      resultImg.src = "img/Tropical-Fish.png";
-    } else {
-      numPuffer++;
-      numPufferSpan.innerHTML = numPuffer;
-      resultImg.src = "img/Pufferfish.png";
-    }
-  } else if (character === "alex") {
-    // ALEX: Cod 10%, Salmon 10%, Tropical 30%, Puffer 50%
-
-    let randNum = Math.random();
-    if (randNum < 0.1) {
-      numCod++;
-      numCodSpan.innerHTML = numCod;
-      resultImg.src = "img/Raw-Cod.png";
-    } else if (randNum < 0.2) {
-      numSalmon++;
-      numSalmonSpan.innerHTML = numSalmon;
-      resultImg.src = "img/Raw-Salmon.png";
-    } else if (randNum < 0.5) {
-      numTropical++;
-      numTropicalSpan.innerHTML = numTropical;
-      resultImg.src = "img/Tropical-Fish.png";
-    } else {
-      numPuffer++;
-      numPufferSpan.innerHTML = numPuffer;
-      resultImg.src = "img/Pufferfish.png";
-    }
-  }
 }
 
 function fishChance(character) {
+  // declare variables
   let randNum = Math.random();
-  if (character === "steve") {
-    let codChance = 0.7;
-    let salmonChance = 0.9;
-    let tropicalChance = 0.95;
-  } else if (character === "alex") {
+  let codChance = 0;
+  let salmonChance = 0;
+  let tropicalChance = 0;
 
+  //set chances
+  if (character === "steve") {
+    codChance = 0.7;
+    salmonChance = 0.9;
+    tropicalChance = 0.95;
+  } else if (character === "alex") {
+    codChance = 0.1;
+    salmonChance = 0.1;
+    tropicalChance = 0.3;
   }
+  // fish
   if (randNum < codChance) {
     numCod++;
     numCodSpan.innerHTML = numCod;
     resultImg.src = "img/Raw-Cod.png";
-  } else if (randNum < 0.9) {
+  } else if (randNum < salmonChance) {
     numSalmon++;
     numSalmonSpan.innerHTML = numSalmon;
     resultImg.src = "img/Raw-Salmon.png";
-  } else if (randNum < 0.95) {
+  } else if (randNum < tropicalChance) {
     numTropical++;
     numTropicalSpan.innerHTML = numTropical;
     resultImg.src = "img/Tropical-Fish.png";
