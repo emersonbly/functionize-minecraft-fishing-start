@@ -9,7 +9,7 @@ let numSalmonSpan = document.getElementById("num-salmon");
 let numTropicalSpan = document.getElementById("num-tropical");
 let numPufferSpan = document.getElementById("num-puffer");
 
-// Global Variables
+// Global Variables!
 let numCod = 0;
 let numSalmon = 0;
 let numTropical = 0;
