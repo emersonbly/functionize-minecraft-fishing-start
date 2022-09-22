@@ -32,8 +32,7 @@ function fishChance(character) {
     catchFish(0.7, 0.9, 0.95);
   } else if (character === "alex") {
     catchFish(0.1, 0.2, 0.3);
-  }
-  else if (character === "villager") {
+  } else if (character === "villager") {
    catchFish(0.25, 0.50, 0.75);
   }
 }
