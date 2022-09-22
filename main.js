@@ -9,7 +9,7 @@ let numSalmonSpan = document.getElementById("num-salmon");
 let numTropicalSpan = document.getElementById("num-tropical");
 let numPufferSpan = document.getElementById("num-puffer");
 
-// Global Variables!
+// Global Variables
 let numCod = 0;
 let numSalmon = 0;
 let numTropical = 0;
@@ -27,26 +27,20 @@ function fishBtnClicked() {
 }
 function fishChance(character) {
   // declare variables
-  let randNum = Math.random();
-  console.log(randNum);
-  let codChance = 0;
-  let salmonChance = 0;
-  let tropicalChance = 0;
   //set chances
   if (character === "steve") {
-    codChance = 0.7;
-    salmonChance = 0.9;
-    tropicalChance = 0.95;
+    catchFish(0.7, 0.9, 0.95);
   } else if (character === "alex") {
-    codChance = 0.1;
-    salmonChance = 0.1;
-    tropicalChance = 0.3;
+    catchFish(0.1, 0.2, 0.3);
   }
   else if (character === "villager") {
-    codChance = 0.25;
-    salmonChance = 0.50;
-    tropicalChance = 0.75;
-  } // fish
+   catchFish(0.25, 0.50, 0.75);
+  }
+}
+
+function catchFish(codChance, salmonChance, tropicalChance) {
+  let randNum = Math.random();
+  console.log(randNum);
   if (randNum < codChance) {
     numCod++;
     numCodSpan.innerHTML = numCod;
