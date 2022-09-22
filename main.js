@@ -23,10 +23,7 @@ fishBtn.addEventListener("click", fishBtnClicked);
 function fishBtnClicked() {
   // Check Selected Character
   let character = charSelect.value;
-  fishChance(character);
-}
-function fishChance(character) {
-  // declare variables
+
   //set chances
   if (character === "steve") {
     catchFish(0.7, 0.9, 0.95);
